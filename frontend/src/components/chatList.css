@@ -1,0 +1,60 @@
+.chatList {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+
+    hr {
+        border: none;
+        height: 2px;
+        background-color: #ddd;
+        opacity: 0.1;
+        border-radius: 5px;
+        margin: 20px 0px;
+    }
+
+    .title {
+        font-weight: 600;
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow-y: scroll;
+    }
+
+    a {
+        padding: 8px;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: #211a3d;
+        }
+    }
+
+    .upgrade {
+        h1 {
+            font-size: 30px;
+            background: linear-gradient(to right, #217bfe, #e55571);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: fixed;
+            bottom: 30px;
+
+            @media (max-width: 768px) {
+                font-size: 24px;
+                bottom: 20px;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 20px;
+                bottom: 10px;
+            }
+        }
+    }
+}
+
+

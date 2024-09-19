@@ -1,0 +1,119 @@
+.dashboardLayout {
+    display: flex;
+    gap: 15px;
+    padding-top: 20px;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu {
+    flex: 1;
+    transition: all 0.3s ease-in-out; 
+}
+
+.content {
+    flex: 4;
+    background-color: rgb(24, 24, 62);
+    transition: all 0.3s ease-in-out;
+}
+
+/* When chat list (menu) is hidden */
+.dashboardLayout.collapsed .menu {
+    width: 0;
+    flex: none;
+    overflow: hidden;
+}
+
+.dashboardLayout.collapsed .content {
+    flex: 1;
+    width: 100%; /* Content takes full width when chat list is hidden */
+}
+
+/* When chat list (menu) is visible */
+.dashboardLayout.expanded .menu {
+    width: 300px;
+    flex: none;
+}
+
+.dashboardLayout.expanded .content {
+    flex: 4;
+    width: auto;
+}
+
+/* Style the button (hamburger container) */
+.toggle-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px; /* Adjust the button height */
+    width: 40px;  /* Adjust the button width */
+}
+
+/* Style the hamburger icon image */
+.toggle-image {
+    width: 50px;  /* Set the desired width of the hamburger icon */
+    height: 50px; /* Set the desired height of the hamburger icon */
+    filter: invert(1);
+}
+
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+    .dashboardLayout {
+        flex-direction: row;
+        gap: 10px;
+        padding-top: 10px;
+    }
+
+    .menu {
+        width: 100%; /* Menu takes full width */
+    }
+
+    .content {
+        width: 100%; /* Content takes full width */
+    }
+
+    .dashboardLayout.collapsed .menu {
+        height: 0;
+        width: 100%; /* Hide menu vertically on smaller screens */
+    }
+
+    .dashboardLayout.expanded .menu {
+        height: auto;
+        width: 100%;
+    }
+
+    .dashboardLayout.collapsed .content,
+    .dashboardLayout.expanded .content {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dashboardLayout {
+        padding-top: 5px;
+    }
+
+    .menu,
+    .content {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .dashboardLayout {
+        gap: 5px;
+    }
+
+    .menu {
+        padding: 5px;
+    }
+
+    .content {
+        padding: 5px;
+    }
+}

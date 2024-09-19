@@ -1,0 +1,22 @@
+.signInPage {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Add padding for smaller screens */
+
+    @media screen and (max-width: 1024px) {
+        flex-direction: column; /* Stack elements vertically on medium screens */
+        padding: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 5px; /* Further reduce padding for smaller screens */
+    }
+
+    @media screen and (max-width: 480px) {
+        padding: 0; /* Remove padding for very small screens */
+        justify-content: flex-start; /* Align content at the top */
+        align-items: flex-start;
+    }
+}

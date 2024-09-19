@@ -1,0 +1,73 @@
+.rootLayout{
+    padding: 15px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-weight: bold;
+            gap: 10px;
+    
+            img{
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+    main{
+        flex: 1;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .rootLayout {
+        padding: 16px 32px; /* Reduce side padding for tablets */
+    }
+
+    header .logo img {
+        width: 35px; /* Decrease logo size */
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .rootLayout {
+        padding: 10px; /* Further reduce padding for mobile devices */
+    }
+
+    header .logo {
+        font-size: 14px; /* Reduce logo font size */
+        gap: 8px; /* Reduce gap between logo and text */
+    }
+
+    header .logo img {
+        width: 30px; /* Decrease logo image size for mobile */
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .rootLayout {
+        padding: 8px; /* Minimal padding for very small devices */
+    }
+
+    header .logo {
+        font-size: 12px; /* Smaller font size for the logo */
+        gap: 5px; /* Minimal gap between logo and text */
+    }
+
+    header .logo img {
+        width: 25px; /* Smallest size for the logo image */
+        height: 25px;
+    }
+}

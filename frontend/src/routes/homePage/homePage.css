@@ -1,0 +1,180 @@
+.homePage {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    height: 100%;
+
+    @media screen and (max-width: 1024px) {
+        flex-direction: column;
+        gap: 0px;
+        justify-content: center; /* Ensure proper centering for smaller screens */
+    }
+
+    .left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        text-align: center;
+
+        h1 {
+            font-size: 128px;
+            background: linear-gradient(to right, #217bfe, #e55571);
+            background-clip: text;
+            --webkit-background-clip: text;
+            color: transparent;
+
+            @media screen and (max-width: 1280px) {
+                font-size: 64px;
+            }
+
+            @media screen and (max-width: 768px) {
+                font-size: 48px; /* Further reduction for smaller screens */
+            }
+        }
+
+        h3 {
+            font-weight: 400;
+            max-width: 70%;
+
+            @media screen and (max-width: 1024px) {
+                max-width: 100%;
+            }
+        }
+
+        a {
+            padding: 10px 20px;
+            background-color: #217bfe;
+            color: white;
+            border-radius: 20px;
+            font-size: 15px;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            background-color: transparent;
+            border: 2px solid #217bfe;
+            color: #217bfe;
+        }
+    }
+
+    .right {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        .imgContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #140e2d;
+            border: 5px solid transparent; /* Completed border definition */
+            width: 80%;
+            height: 50%;
+            position: relative;
+
+            @media screen and (max-width: 1024px) {
+                width: 100%;
+                height: 60%;
+            }
+
+            .bgContainer {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 40px;
+
+                .bg {
+                    background-image: url("bg.jpg");
+                    opacity: 0.6;
+                    width: 200%;
+                    height: 100%;
+                    background-size: auto 100%;
+                    animation: 8s ease-in-out infinite alternate slideBg;
+                }
+            }
+
+            .bot {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                animation: 3s ease-in-out infinite alternate botAnimate;
+            }
+
+            .chat {
+                position: absolute;
+                bottom: -15px;
+                right: -30px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 5px;
+                background-color: #322857;
+                border-radius: 10px;
+
+                @media screen and (max-width: 768px) {
+                    display: none; /* Hidden only for screens smaller than 768px */
+                }
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    .terms {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        img {
+            height: 30px;
+            width: 30px;
+        }
+
+        .links {
+            display: flex;
+            gap: 10px;
+            color: #888;
+            font-size: 12px;
+
+            a{
+                padding: 3px;
+            }
+        }
+    }
+}
+
+@keyframes botAnimate {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    100% {
+        transform: scale(1.1) rotate(-5deg);
+    }
+}
+
+@keyframes slideBg {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
