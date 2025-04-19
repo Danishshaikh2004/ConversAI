@@ -145,7 +145,7 @@ const NewPrompt = ({ data }) => {
         <input id="file" type="file" multiple={false} hidden />
         <input type="text" name="text" placeholder="Ask anything..." />
         <button>
-          <img src="/arrow.png" alt="" />
+          <img src="https://conversai-img.s3.us-east-1.amazonaws.com/arrow.png" alt="" />
         </button>
       </form>
     </>
