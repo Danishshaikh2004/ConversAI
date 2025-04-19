@@ -18,7 +18,7 @@ const RootLayout = () => {
         <div className="rootLayout">
           <header>
             <Link to="/" className="logo">
-              <img src="/logo.png" alt="" />
+              <img src="https://conversai-img.s3.us-east-1.amazonaws.com/logo.png" alt="" />
               <span>ConversAI</span>
             </Link>
             <div className="user">
