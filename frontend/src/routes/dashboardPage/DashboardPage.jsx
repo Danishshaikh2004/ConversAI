@@ -37,20 +37,20 @@ const DashboardPage = () => {
       <div className="dashboardPage">
         <div className="texts">
           <div className="logo">
-            <img src="/logo.png" alt="" />
+            <img src="https://conversai-img.s3.us-east-1.amazonaws.com/logo.png" alt="" />
             <h1>ConversAI</h1>
           </div>
           <div className="options">
             <div className="option">
-              <img src="/chat.png" alt="" />
+              <img src="https://conversai-img.s3.us-east-1.amazonaws.com/chat.png" alt="" />
               <span>Create a New Chat</span>
             </div>
             <div className="option">
-              <img src="/image.png" alt="" />
+              <img src="https://conversai-img.s3.us-east-1.amazonaws.com/image.png" alt="" />
               <span>Analyze Images</span>
             </div>
             <div className="option">
-              <img src="/code.png" alt="" />
+              <img src="https://conversai-img.s3.us-east-1.amazonaws.com/code.png" alt="" />
               <span>Help me with my code</span>
             </div>
           </div>
@@ -59,7 +59,7 @@ const DashboardPage = () => {
           <form onSubmit={handleSubmit}>
             <input type="text" name='text' placeholder='Ask me anything...' />
             <button type="submit">
-              <img src="/arrow.png" alt="" />
+              <img src="https://conversai-img.s3.us-east-1.amazonaws.com/arrow.png" alt="" />
             </button>
           </form>
         </div>
