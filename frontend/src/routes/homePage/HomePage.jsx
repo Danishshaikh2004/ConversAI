@@ -51,7 +51,7 @@ const HomePage = () => {
         </div>
       </div>
       <div className="terms">
-        <img src="/logo.png" alt="" />
+        <img src="https://conversai-img.s3.us-east-1.amazonaws.com/logo.png" alt="" />
         <div className="links">
           <Link to="/">Terms of Service</Link>
           <span>|</span>
