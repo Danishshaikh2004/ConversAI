@@ -19,9 +19,9 @@ const HomePage = () => {
           <div className="bgContainer">
             <div className="bg"></div>
           </div>
-          <img src="/bot-main.png" alt="" className='bot' />
+          <img src="https://conversai-img.s3.us-east-1.amazonaws.com/bot-main.png" alt="" className='bot' />
           <div className="chat">
-            <img src={typingStatus === "human1" ? "/human1.jpeg" : typingStatus === "human2" ? "/human2.jpeg" : "/bot-main.png"} alt="bot" />
+            <img src={typingStatus === "human1" ? "/https://conversai-img.s3.us-east-1.amazonaws.com/human1.jpeg" : typingStatus === "human2" ? "/https://conversai-img.s3.us-east-1.amazonaws.com/human2.jpeg" : "/bot-main.png"} alt="bot" />
             <TypeAnimation
               sequence={[
                 // Same substring at the start will only be typed out once, initially
