@@ -81,7 +81,7 @@ const Upload = ({ setImg }) => {
       />
       {
         <label onClick={() => ikUploadRef.current.click()}>
-          <img src="/attachment.png" alt="" />
+          <img src="https://conversai-img.s3.us-east-1.amazonaws.com/attachment.png" alt="" />
         </label>
       }
     </IKContext>
